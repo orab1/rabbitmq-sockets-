@@ -1,4 +1,5 @@
 import 'dotenv/config';
 import app from './config/app';
+import connect from './config/mongodb';
 
-app()
+connect().then(() => app());
