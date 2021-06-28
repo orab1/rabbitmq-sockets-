@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import api from '../api';
 import bodyParser from 'body-parser';
+import amqp from 'amqplib';
 
 const PORT = process.env.PORT;
 
