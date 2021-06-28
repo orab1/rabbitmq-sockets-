@@ -1,5 +1,9 @@
 import 'dotenv/config';
 import app from './config/app';
-import connect from './config/mongodb';
+import connectMongoose from './config/mongodb';
+import connectRabbit from './config/rabbitmq';
 
-connect().then(() => app());
+connectMongoose()
+    .then(() => app()
+        .then(() => connectRabbit())
+    );
