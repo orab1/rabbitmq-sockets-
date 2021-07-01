@@ -12,7 +12,7 @@ const app = async () => {
 
         app.use(bodyParser.json())
         app.use(cors())
-        app.use('/', api);
+        app.use('/api', api);
     
         app.listen(PORT, () => console.log(`listening on port ${PORT}`));
     } catch (error) {
