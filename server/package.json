@@ -1,7 +1,6 @@
 {
-  "name": "rabbitmq-socekts-server",
+  "name": "@orab/rabbitmq-socekts-server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js"
@@ -23,5 +22,10 @@
     "express": "^4.17.1",
     "express-async-router": "^0.1.15",
     "mongoose": "^5.12.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "rabbitmq-sockets"
+  },
+  "description": ""
 }

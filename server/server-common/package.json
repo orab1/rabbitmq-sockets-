@@ -1,10 +1,17 @@
 {
-  "name": "rabbitmq-server-common",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@orab/rabbitmq-server-common",
+  "version": "1.0.3",
+  "main": "build/index.js",
   "scripts": {
+    "prepublishOnly": "npm version patch && npm run delete && npm run build",
+    "build": "npx babel ./src -d build",
+    "delete": "rimraf ./build"
   },
-  "author": "Or Abitbul",
-  "license": "ISC"
+  "license": "ISC",
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6"
+  }
 }
